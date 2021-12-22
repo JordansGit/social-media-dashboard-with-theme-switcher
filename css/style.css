@@ -1,0 +1,102 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; 
+  margin: 0;
+  background: hsl(0, 0, 100%); 
+  font-weight: 700;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: auto 200px auto auto auto; 
+  grid-gap: 30px; 
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+/* HEADER */ 
+.header {
+  grid-column: 1 / 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header-2 {
+  grid-column: 1 / 5;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+
+}
+
+/* CARDS */ 
+.card {
+  background-color: hsl(227, 47%, 96%); 
+  border-radius: 5px;
+}
+
+.big-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-card {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 30px;
+}
+
+.right {
+  text-align: right;
+}
+
+/* TEXT */ 
+h1, h2 {
+  margin: 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+span {
+  color: hsl(230, 17%, 14%)
+}
+
+h2, p {
+  color: hsl(228, 12%, 44%); 
+}
+
+h1, span {
+  color: hsl(230, 17%, 14%);
+}
+
+.big-card span {
+  font-size: 50px;
+}
+
+.small-card span {
+  font-size: 32px;
+}
+
+/* To do: 
+    small-card > change text colour and size of last p tag + add arrow img.
+    add more big-card css
+    add top background 
+    add toggle 
+    then js. 
+    then mobile responsive. 
+*/
