@@ -6,6 +6,17 @@ body {
   font-weight: 700;
 }
 
+#top-bg {
+  height: 273px; 
+  background-color: hsl(225, 100%, 98%); 
+  position: absolute;
+  margin: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  opacity: 1;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr; 
@@ -14,6 +25,8 @@ body {
   width: 1100px;
   margin: 0 auto;
   margin-top: 80px;
+  z-index: 99;
+  position: relative;
 }
 
 /* HEADER */ 
@@ -40,11 +53,23 @@ body {
   border-radius: 5px;
 }
 
+.card:active {
+  background-color: hsl(227, 47%, 90%); 
+  cursor: pointer; 
+}
+
 .big-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; 
+}
+
+.social-media-tag {
+  display: flex;
   align-items: center;
+  gap: 8px;
+  margin-bottom: 15px; 
 }
 
 .small-card {
@@ -52,12 +77,37 @@ body {
   grid-template-columns: auto auto;
   justify-content: space-between;
   gap: 20px;
-  padding: 28px 30px;
+  padding: 25px 30px;
 }
 
 .right {
   text-align: right;
 }
+
+.arrow {
+  margin: 5px 3px;
+}
+
+.card1 {
+  border-top: 4px solid hsl(208, 92%, 53%);
+
+}
+
+.card2 {
+  border-top: 4px solid hsl(203, 89%, 53%);
+
+}
+
+.card3 {
+  border-top: 4px solid; 
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1;
+}
+
+.card4 {
+  border-top: 4px solid hsl(348, 97%, 39%);
+
+}
+
 
 /* TEXT */ 
 h1, h2 {
@@ -76,7 +126,7 @@ span {
   color: hsl(230, 17%, 14%)
 }
 
-h2, p {
+h2, p.p-change {
   color: hsl(228, 12%, 44%); 
 }
 
@@ -92,11 +142,44 @@ h1, span {
   font-size: 32px;
 }
 
+.small-card > .small-text-parent {
+  margin-bottom: 5px;
+}
+
+.small-text-parent {
+  display: flex; 
+  align-items: flex-end; 
+}
+.small-text {
+  vertical-align: bottom; 
+  color: hsl(163, 72%, 41%); 
+  margin: 0;
+  font-size: 12px;
+}
+
+.align-center {
+  margin: 0;
+}
+
+.red {
+  color: hsl(356, 69%, 56%); 
+}
+
+.big-card > p {
+  margin: 0 0 20px 0;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
 /* To do: 
-    small-card > change text colour and size of last p tag + add arrow img.
-    add more big-card css
-    add top background 
-    add toggle 
-    then js. 
+    add js for the toggle theme. 
+    add toggle: css + active state. 
     then mobile responsive. 
+
+    refactor code: instead of having classes for images, e.g img class = arrow, just use small-class-parent > img. the css uses same amount of code but there's less code in the html. 
+
+    UNFINISHED: 
+      add top colour border to card 3: *** LEAVE UNFINISHED, IDK HOW TO DO AND NEED TO FOCUS ON GETTING THIS DONE *** 
 */
